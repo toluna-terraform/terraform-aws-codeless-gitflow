@@ -2,7 +2,7 @@
      type     = string
  }
 
- variable "env_type" {
+variable "env_type" {
   type = string
 }
 

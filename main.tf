@@ -26,6 +26,7 @@ module "test" {
   privileged_mode                       = true
   buildspec_file                        = templatefile("test_buildspec.yml.tpl",
   { ENV_NAME = split("-",var.env_name)[0],
+    ENVIRONMENT = var.env_name,
     FROM_ENV = var.from_env,
     APP_NAME = var.app_name,
     ENV_TYPE = var.env_type,

@@ -34,7 +34,8 @@ data "aws_iam_policy_document" "codebuild_role_policy" {
             "ssm:*",
             "s3:*",
             "codebuild:*",
-            "cloudfront:*"
+            "cloudfront:*",
+            "apigateway:*"
         ]
     resources = ["*"]
   }
