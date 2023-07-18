@@ -24,6 +24,7 @@ module "test" {
   source_repository                     = var.source_repository
   s3_bucket                             = "s3-codepipeline-${var.app_name}-${var.env_type}"
   privileged_mode                       = true
+  environment_variables                 = var.environment_variables
   buildspec_file                        = templatefile("test_buildspec.yml.tpl",
   { ENV_NAME = split("-",var.env_name)[0],
     ENVIRONMENT = var.env_name,
